@@ -1,0 +1,1550 @@
+{
+	"info": {
+		"_postman_id": "bb19b3d3-170c-4802-ab99-311cb5d8c7d0",
+		"name": "Supply Chain API",
+		"description": "API for supply chain transparency with sustainability tracking\n\nContact Support:\n Name: FIAP\n Email: rm555011@fiap.com.br",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16096180"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "suppliers",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Get supplier by ID",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/suppliers/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"suppliers",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-84195226",
+													"description": "(Required) ID of the supplier to retrieve"
+												}
+											]
+										},
+										"description": "Retrieves a specific supplier based on the provided ID"
+									},
+									"response": [
+										{
+											"name": "Successfully retrieved the supplier",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/suppliers/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"suppliers",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"email\": \"laboris eiusmod laborum\",\n  \"name\": \"do\",\n  \"id\": -43887858,\n  \"sustainablePracticesScore\": -70823709,\n  \"fairLaborScore\": 17980689,\n  \"certificationStatus\": \"tempor incididunt\",\n  \"lastAuditDate\": \"2013-09-24T09:11:55.437Z\",\n  \"createdAt\": \"1995-05-17T19:23:58.238Z\",\n  \"updatedAt\": \"2015-03-15T03:58:52.170Z\"\n}"
+										},
+										{
+											"name": "Supplier not found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/suppliers/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"suppliers",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"email\": \"laboris eiusmod laborum\",\n  \"name\": \"do\",\n  \"id\": -43887858,\n  \"sustainablePracticesScore\": -70823709,\n  \"fairLaborScore\": 17980689,\n  \"certificationStatus\": \"tempor incididunt\",\n  \"lastAuditDate\": \"2013-09-24T09:11:55.437Z\",\n  \"createdAt\": \"1995-05-17T19:23:58.238Z\",\n  \"updatedAt\": \"2015-03-15T03:58:52.170Z\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Update a supplier",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"laboris eiusmod laborum\",\n  \"name\": \"do\",\n  \"id\": -43887858,\n  \"sustainablePracticesScore\": -70823709,\n  \"fairLaborScore\": 17980689,\n  \"certificationStatus\": \"tempor incididunt\",\n  \"lastAuditDate\": \"2013-09-24T09:11:55.437Z\",\n  \"createdAt\": \"1995-05-17T19:23:58.238Z\",\n  \"updatedAt\": \"2015-03-15T03:58:52.170Z\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/suppliers/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"suppliers",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-84195226",
+													"description": "(Required) ID of the supplier to update"
+												}
+											]
+										},
+										"description": "Updates an existing supplier with the provided information"
+									},
+									"response": [
+										{
+											"name": "Supplier updated successfully",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"email\": \"laboris eiusmod laborum\",\n  \"name\": \"do\",\n  \"id\": -43887858,\n  \"sustainablePracticesScore\": -70823709,\n  \"fairLaborScore\": 17980689,\n  \"certificationStatus\": \"tempor incididunt\",\n  \"lastAuditDate\": \"2013-09-24T09:11:55.437Z\",\n  \"createdAt\": \"1995-05-17T19:23:58.238Z\",\n  \"updatedAt\": \"2015-03-15T03:58:52.170Z\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/suppliers/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"suppliers",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"email\": \"laboris eiusmod laborum\",\n  \"name\": \"do\",\n  \"id\": -43887858,\n  \"sustainablePracticesScore\": -70823709,\n  \"fairLaborScore\": 17980689,\n  \"certificationStatus\": \"tempor incididunt\",\n  \"lastAuditDate\": \"2013-09-24T09:11:55.437Z\",\n  \"createdAt\": \"1995-05-17T19:23:58.238Z\",\n  \"updatedAt\": \"2015-03-15T03:58:52.170Z\"\n}"
+										},
+										{
+											"name": "Supplier not found",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"email\": \"laboris eiusmod laborum\",\n  \"name\": \"do\",\n  \"id\": -43887858,\n  \"sustainablePracticesScore\": -70823709,\n  \"fairLaborScore\": 17980689,\n  \"certificationStatus\": \"tempor incididunt\",\n  \"lastAuditDate\": \"2013-09-24T09:11:55.437Z\",\n  \"createdAt\": \"1995-05-17T19:23:58.238Z\",\n  \"updatedAt\": \"2015-03-15T03:58:52.170Z\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/suppliers/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"suppliers",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"email\": \"laboris eiusmod laborum\",\n  \"name\": \"do\",\n  \"id\": -43887858,\n  \"sustainablePracticesScore\": -70823709,\n  \"fairLaborScore\": 17980689,\n  \"certificationStatus\": \"tempor incididunt\",\n  \"lastAuditDate\": \"2013-09-24T09:11:55.437Z\",\n  \"createdAt\": \"1995-05-17T19:23:58.238Z\",\n  \"updatedAt\": \"2015-03-15T03:58:52.170Z\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Delete a supplier",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/suppliers/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"suppliers",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-84195226",
+													"description": "(Required) ID of the supplier to delete"
+												}
+											]
+										},
+										"description": "Deletes a supplier based on the provided ID"
+									},
+									"response": [
+										{
+											"name": "Supplier deleted successfully",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/suppliers/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"suppliers",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Supplier not found",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/suppliers/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"suppliers",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "sustainable",
+							"item": [
+								{
+									"name": "Get suppliers by sustainability score",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/suppliers/sustainable?minScore=37649096",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"suppliers",
+												"sustainable"
+											],
+											"query": [
+												{
+													"key": "minScore",
+													"value": "37649096",
+													"description": "(Required) Minimum sustainability score threshold"
+												}
+											]
+										},
+										"description": "Retrieves suppliers with a sustainability score above the specified minimum"
+									},
+									"response": [
+										{
+											"name": "Successfully retrieved suppliers",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/suppliers/sustainable?minScore=37649096",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"suppliers",
+														"sustainable"
+													],
+													"query": [
+														{
+															"key": "minScore",
+															"value": "37649096",
+															"description": "(Required) Minimum sustainability score threshold"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "[\n  {\n    \"email\": \"consectetur dolor culpa ipsum\",\n    \"name\": \"aute laboris\",\n    \"id\": -51399446,\n    \"sustainablePracticesScore\": -38427719,\n    \"fairLaborScore\": 15363189,\n    \"certificationStatus\": \"Excepteur laboris consectetur Duis\",\n    \"lastAuditDate\": \"1980-01-15T11:13:46.122Z\",\n    \"createdAt\": \"2023-01-10T09:16:53.609Z\",\n    \"updatedAt\": \"1958-02-25T16:46:59.573Z\"\n  },\n  {\n    \"email\": \"id in\",\n    \"name\": \"in ea ipsum\",\n    \"id\": -18253400,\n    \"sustainablePracticesScore\": 59815540,\n    \"fairLaborScore\": 26925884,\n    \"certificationStatus\": \"ut eu\",\n    \"lastAuditDate\": \"1956-02-09T18:58:08.432Z\",\n    \"createdAt\": \"2016-08-26T23:11:37.924Z\",\n    \"updatedAt\": \"1990-02-16T14:04:19.941Z\"\n  }\n]"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Get all suppliers",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/suppliers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"suppliers"
+									]
+								},
+								"description": "Retrieves a list of all registered suppliers"
+							},
+							"response": [
+								{
+									"name": "Successfully retrieved the list of suppliers",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/suppliers",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"suppliers"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"email\": \"consectetur dolor culpa ipsum\",\n    \"name\": \"aute laboris\",\n    \"id\": -51399446,\n    \"sustainablePracticesScore\": -38427719,\n    \"fairLaborScore\": 15363189,\n    \"certificationStatus\": \"Excepteur laboris consectetur Duis\",\n    \"lastAuditDate\": \"1980-01-15T11:13:46.122Z\",\n    \"createdAt\": \"2023-01-10T09:16:53.609Z\",\n    \"updatedAt\": \"1958-02-25T16:46:59.573Z\"\n  },\n  {\n    \"email\": \"id in\",\n    \"name\": \"in ea ipsum\",\n    \"id\": -18253400,\n    \"sustainablePracticesScore\": 59815540,\n    \"fairLaborScore\": 26925884,\n    \"certificationStatus\": \"ut eu\",\n    \"lastAuditDate\": \"1956-02-09T18:58:08.432Z\",\n    \"createdAt\": \"2016-08-26T23:11:37.924Z\",\n    \"updatedAt\": \"1990-02-16T14:04:19.941Z\"\n  }\n]"
+								}
+							]
+						},
+						{
+							"name": "Create a new supplier",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"laboris eiusmod laborum\",\n  \"name\": \"do\",\n  \"id\": -43887858,\n  \"sustainablePracticesScore\": -70823709,\n  \"fairLaborScore\": 17980689,\n  \"certificationStatus\": \"tempor incididunt\",\n  \"lastAuditDate\": \"2013-09-24T09:11:55.437Z\",\n  \"createdAt\": \"1995-05-17T19:23:58.238Z\",\n  \"updatedAt\": \"2015-03-15T03:58:52.170Z\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/suppliers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"suppliers"
+									]
+								},
+								"description": "Creates a new supplier with the provided information"
+							},
+							"response": [
+								{
+									"name": "Supplier created successfully",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"laboris eiusmod laborum\",\n  \"name\": \"do\",\n  \"id\": -43887858,\n  \"sustainablePracticesScore\": -70823709,\n  \"fairLaborScore\": 17980689,\n  \"certificationStatus\": \"tempor incididunt\",\n  \"lastAuditDate\": \"2013-09-24T09:11:55.437Z\",\n  \"createdAt\": \"1995-05-17T19:23:58.238Z\",\n  \"updatedAt\": \"2015-03-15T03:58:52.170Z\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/suppliers",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"suppliers"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"email\": \"laboris eiusmod laborum\",\n  \"name\": \"do\",\n  \"id\": -43887858,\n  \"sustainablePracticesScore\": -70823709,\n  \"fairLaborScore\": 17980689,\n  \"certificationStatus\": \"tempor incididunt\",\n  \"lastAuditDate\": \"2013-09-24T09:11:55.437Z\",\n  \"createdAt\": \"1995-05-17T19:23:58.238Z\",\n  \"updatedAt\": \"2015-03-15T03:58:52.170Z\"\n}"
+								},
+								{
+									"name": "Invalid input provided",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"laboris eiusmod laborum\",\n  \"name\": \"do\",\n  \"id\": -43887858,\n  \"sustainablePracticesScore\": -70823709,\n  \"fairLaborScore\": 17980689,\n  \"certificationStatus\": \"tempor incididunt\",\n  \"lastAuditDate\": \"2013-09-24T09:11:55.437Z\",\n  \"createdAt\": \"1995-05-17T19:23:58.238Z\",\n  \"updatedAt\": \"2015-03-15T03:58:52.170Z\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/suppliers",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"suppliers"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"email\": \"laboris eiusmod laborum\",\n  \"name\": \"do\",\n  \"id\": -43887858,\n  \"sustainablePracticesScore\": -70823709,\n  \"fairLaborScore\": 17980689,\n  \"certificationStatus\": \"tempor incididunt\",\n  \"lastAuditDate\": \"2013-09-24T09:11:55.437Z\",\n  \"createdAt\": \"1995-05-17T19:23:58.238Z\",\n  \"updatedAt\": \"2015-03-15T03:58:52.170Z\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "compliance-reports",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "get Compliance Report By Id",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/compliance-reports/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"compliance-reports",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-84195226",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/compliance-reports/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"compliance-reports",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"complianceStatus\": \"fugiat\",\n  \"reportDate\": \"1988-10-16T17:20:58.273Z\",\n  \"id\": 6836710,\n  \"supplier\": {\n    \"email\": \"Duis enim\",\n    \"name\": \"minim culpa cillum fugiat\",\n    \"id\": 46375852,\n    \"sustainablePracticesScore\": -27790228,\n    \"fairLaborScore\": 72317487,\n    \"certificationStatus\": \"dolor exercitation ipsum reprehenderit eu\",\n    \"lastAuditDate\": \"1978-11-16T06:37:49.606Z\",\n    \"createdAt\": \"1977-10-13T03:42:36.371Z\",\n    \"updatedAt\": \"1982-03-28T00:49:16.901Z\"\n  },\n  \"regulatoryRequirements\": \"Lorem eu al\",\n  \"auditFindings\": \"velit\",\n  \"correctiveActions\": \"ut pariatur\",\n  \"createdAt\": \"2016-03-09T00:40:10.520Z\",\n  \"updatedAt\": \"2014-08-16T21:03:32.603Z\"\n}"
+										}
+									]
+								},
+								{
+									"name": "update Compliance Report",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"complianceStatus\": \"fugiat\",\n  \"reportDate\": \"1988-10-16T17:20:58.273Z\",\n  \"id\": 6836710,\n  \"supplier\": {\n    \"email\": \"Duis enim\",\n    \"name\": \"minim culpa cillum fugiat\",\n    \"id\": 46375852,\n    \"sustainablePracticesScore\": -27790228,\n    \"fairLaborScore\": 72317487,\n    \"certificationStatus\": \"dolor exercitation ipsum reprehenderit eu\",\n    \"lastAuditDate\": \"1978-11-16T06:37:49.606Z\",\n    \"createdAt\": \"1977-10-13T03:42:36.371Z\",\n    \"updatedAt\": \"1982-03-28T00:49:16.901Z\"\n  },\n  \"regulatoryRequirements\": \"Lorem eu al\",\n  \"auditFindings\": \"velit\",\n  \"correctiveActions\": \"ut pariatur\",\n  \"createdAt\": \"2016-03-09T00:40:10.520Z\",\n  \"updatedAt\": \"2014-08-16T21:03:32.603Z\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/compliance-reports/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"compliance-reports",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-84195226",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"complianceStatus\": \"fugiat\",\n  \"reportDate\": \"1988-10-16T17:20:58.273Z\",\n  \"id\": 6836710,\n  \"supplier\": {\n    \"email\": \"Duis enim\",\n    \"name\": \"minim culpa cillum fugiat\",\n    \"id\": 46375852,\n    \"sustainablePracticesScore\": -27790228,\n    \"fairLaborScore\": 72317487,\n    \"certificationStatus\": \"dolor exercitation ipsum reprehenderit eu\",\n    \"lastAuditDate\": \"1978-11-16T06:37:49.606Z\",\n    \"createdAt\": \"1977-10-13T03:42:36.371Z\",\n    \"updatedAt\": \"1982-03-28T00:49:16.901Z\"\n  },\n  \"regulatoryRequirements\": \"Lorem eu al\",\n  \"auditFindings\": \"velit\",\n  \"correctiveActions\": \"ut pariatur\",\n  \"createdAt\": \"2016-03-09T00:40:10.520Z\",\n  \"updatedAt\": \"2014-08-16T21:03:32.603Z\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/compliance-reports/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"compliance-reports",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"complianceStatus\": \"fugiat\",\n  \"reportDate\": \"1988-10-16T17:20:58.273Z\",\n  \"id\": 6836710,\n  \"supplier\": {\n    \"email\": \"Duis enim\",\n    \"name\": \"minim culpa cillum fugiat\",\n    \"id\": 46375852,\n    \"sustainablePracticesScore\": -27790228,\n    \"fairLaborScore\": 72317487,\n    \"certificationStatus\": \"dolor exercitation ipsum reprehenderit eu\",\n    \"lastAuditDate\": \"1978-11-16T06:37:49.606Z\",\n    \"createdAt\": \"1977-10-13T03:42:36.371Z\",\n    \"updatedAt\": \"1982-03-28T00:49:16.901Z\"\n  },\n  \"regulatoryRequirements\": \"Lorem eu al\",\n  \"auditFindings\": \"velit\",\n  \"correctiveActions\": \"ut pariatur\",\n  \"createdAt\": \"2016-03-09T00:40:10.520Z\",\n  \"updatedAt\": \"2014-08-16T21:03:32.603Z\"\n}"
+										}
+									]
+								},
+								{
+									"name": "delete Compliance Report",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/compliance-reports/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"compliance-reports",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-84195226",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/compliance-reports/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"compliance-reports",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "supplier",
+							"item": [
+								{
+									"name": "{supplierId}",
+									"item": [
+										{
+											"name": "get Compliance Reports By Supplier",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/compliance-reports/supplier/:supplierId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"compliance-reports",
+														"supplier",
+														":supplierId"
+													],
+													"variable": [
+														{
+															"key": "supplierId",
+															"value": "-84195226",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/compliance-reports/supplier/:supplierId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"compliance-reports",
+																"supplier",
+																":supplierId"
+															],
+															"variable": [
+																{
+																	"key": "supplierId"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "[\n  {\n    \"complianceStatus\": \"irure ipsum proident\",\n    \"reportDate\": \"1992-08-13T06:38:20.757Z\",\n    \"id\": -21418630,\n    \"supplier\": {\n      \"email\": \"nulla deserunt qui dolor\",\n      \"name\": \"deserunt ex\",\n      \"id\": -5579742,\n      \"sustainablePracticesScore\": -43701808,\n      \"fairLaborScore\": -14717217,\n      \"certificationStatus\": \"sint Excepteur consectetur proident\",\n      \"lastAuditDate\": \"1971-08-09T09:17:17.317Z\",\n      \"createdAt\": \"1949-11-05T01:23:32.142Z\",\n      \"updatedAt\": \"2024-05-26T20:30:42.472Z\"\n    },\n    \"regulatoryRequirements\": \"adipisicing ut Lorem\",\n    \"auditFindings\": \"Excepteur anim Duis\",\n    \"correctiveActions\": \"fugiat occaecat velit\",\n    \"createdAt\": \"1996-07-27T16:12:29.584Z\",\n    \"updatedAt\": \"1966-05-10T09:28:52.459Z\"\n  },\n  {\n    \"complianceStatus\": \"anim enim veniam adipisicing sit\",\n    \"reportDate\": \"2003-03-09T06:49:40.160Z\",\n    \"id\": 24252315,\n    \"supplier\": {\n      \"email\": \"nisi aliquip\",\n      \"name\": \"dolore dolor Lorem fugiat\",\n      \"id\": -97110554,\n      \"sustainablePracticesScore\": 12654633,\n      \"fairLaborScore\": 5621759,\n      \"certificationStatus\": \"cupidatat laboris sit dolore laborum\",\n      \"lastAuditDate\": \"1956-07-12T20:16:36.385Z\",\n      \"createdAt\": \"2009-09-16T15:20:09.417Z\",\n      \"updatedAt\": \"1978-05-30T14:43:39.510Z\"\n    },\n    \"regulatoryRequirements\": \"minim exercitation in culpa enim\",\n    \"auditFindings\": \"officia\",\n    \"correctiveActions\": \"volupt\",\n    \"createdAt\": \"1948-09-30T15:08:41.217Z\",\n    \"updatedAt\": \"2018-06-15T02:27:01.354Z\"\n  }\n]"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "create Compliance Report",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"complianceStatus\": \"fugiat\",\n  \"reportDate\": \"1988-10-16T17:20:58.273Z\",\n  \"id\": 6836710,\n  \"supplier\": {\n    \"email\": \"Duis enim\",\n    \"name\": \"minim culpa cillum fugiat\",\n    \"id\": 46375852,\n    \"sustainablePracticesScore\": -27790228,\n    \"fairLaborScore\": 72317487,\n    \"certificationStatus\": \"dolor exercitation ipsum reprehenderit eu\",\n    \"lastAuditDate\": \"1978-11-16T06:37:49.606Z\",\n    \"createdAt\": \"1977-10-13T03:42:36.371Z\",\n    \"updatedAt\": \"1982-03-28T00:49:16.901Z\"\n  },\n  \"regulatoryRequirements\": \"Lorem eu al\",\n  \"auditFindings\": \"velit\",\n  \"correctiveActions\": \"ut pariatur\",\n  \"createdAt\": \"2016-03-09T00:40:10.520Z\",\n  \"updatedAt\": \"2014-08-16T21:03:32.603Z\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/compliance-reports",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"compliance-reports"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"complianceStatus\": \"fugiat\",\n  \"reportDate\": \"1988-10-16T17:20:58.273Z\",\n  \"id\": 6836710,\n  \"supplier\": {\n    \"email\": \"Duis enim\",\n    \"name\": \"minim culpa cillum fugiat\",\n    \"id\": 46375852,\n    \"sustainablePracticesScore\": -27790228,\n    \"fairLaborScore\": 72317487,\n    \"certificationStatus\": \"dolor exercitation ipsum reprehenderit eu\",\n    \"lastAuditDate\": \"1978-11-16T06:37:49.606Z\",\n    \"createdAt\": \"1977-10-13T03:42:36.371Z\",\n    \"updatedAt\": \"1982-03-28T00:49:16.901Z\"\n  },\n  \"regulatoryRequirements\": \"Lorem eu al\",\n  \"auditFindings\": \"velit\",\n  \"correctiveActions\": \"ut pariatur\",\n  \"createdAt\": \"2016-03-09T00:40:10.520Z\",\n  \"updatedAt\": \"2014-08-16T21:03:32.603Z\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/compliance-reports",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"compliance-reports"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"complianceStatus\": \"fugiat\",\n  \"reportDate\": \"1988-10-16T17:20:58.273Z\",\n  \"id\": 6836710,\n  \"supplier\": {\n    \"email\": \"Duis enim\",\n    \"name\": \"minim culpa cillum fugiat\",\n    \"id\": 46375852,\n    \"sustainablePracticesScore\": -27790228,\n    \"fairLaborScore\": 72317487,\n    \"certificationStatus\": \"dolor exercitation ipsum reprehenderit eu\",\n    \"lastAuditDate\": \"1978-11-16T06:37:49.606Z\",\n    \"createdAt\": \"1977-10-13T03:42:36.371Z\",\n    \"updatedAt\": \"1982-03-28T00:49:16.901Z\"\n  },\n  \"regulatoryRequirements\": \"Lorem eu al\",\n  \"auditFindings\": \"velit\",\n  \"correctiveActions\": \"ut pariatur\",\n  \"createdAt\": \"2016-03-09T00:40:10.520Z\",\n  \"updatedAt\": \"2014-08-16T21:03:32.603Z\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "carbon-footprints",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "get Carbon Footprint By Id",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/carbon-footprints/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"carbon-footprints",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-84195226",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/carbon-footprints/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"carbon-footprints",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"emissionDate\": \"1951-10-03T07:54:35.901Z\",\n  \"productionEmissions\": -53552939.07446654,\n  \"transportationEmissions\": -22848683.234667793,\n  \"id\": -76032917,\n  \"supplier\": {\n    \"email\": \"anim sint ut ea dolor\",\n    \"name\": \"aliqua laboris consequat \",\n    \"id\": 46167491,\n    \"sustainablePracticesScore\": 75365556,\n    \"fairLaborScore\": 52600451,\n    \"certificationStatus\": \"ipsum ut reprehenderit ex\",\n    \"lastAuditDate\": \"1972-12-29T23:10:48.281Z\",\n    \"createdAt\": \"1967-01-26T02:52:22.926Z\",\n    \"updatedAt\": \"1950-02-14T03:39:13.841Z\"\n  },\n  \"emissionSource\": \"proident\",\n  \"mitigationMeasures\": \"veniam est ad in\",\n  \"createdAt\": \"2004-04-24T22:32:52.902Z\",\n  \"updatedAt\": \"1977-10-06T20:29:12.333Z\"\n}"
+										}
+									]
+								},
+								{
+									"name": "update Carbon Footprint",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"emissionDate\": \"1951-10-03T07:54:35.901Z\",\n  \"productionEmissions\": -53552939.07446654,\n  \"transportationEmissions\": -22848683.234667793,\n  \"id\": -76032917,\n  \"supplier\": {\n    \"email\": \"anim sint ut ea dolor\",\n    \"name\": \"aliqua laboris consequat \",\n    \"id\": 46167491,\n    \"sustainablePracticesScore\": 75365556,\n    \"fairLaborScore\": 52600451,\n    \"certificationStatus\": \"ipsum ut reprehenderit ex\",\n    \"lastAuditDate\": \"1972-12-29T23:10:48.281Z\",\n    \"createdAt\": \"1967-01-26T02:52:22.926Z\",\n    \"updatedAt\": \"1950-02-14T03:39:13.841Z\"\n  },\n  \"emissionSource\": \"proident\",\n  \"mitigationMeasures\": \"veniam est ad in\",\n  \"createdAt\": \"2004-04-24T22:32:52.902Z\",\n  \"updatedAt\": \"1977-10-06T20:29:12.333Z\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/carbon-footprints/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"carbon-footprints",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-84195226",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"emissionDate\": \"1951-10-03T07:54:35.901Z\",\n  \"productionEmissions\": -53552939.07446654,\n  \"transportationEmissions\": -22848683.234667793,\n  \"id\": -76032917,\n  \"supplier\": {\n    \"email\": \"anim sint ut ea dolor\",\n    \"name\": \"aliqua laboris consequat \",\n    \"id\": 46167491,\n    \"sustainablePracticesScore\": 75365556,\n    \"fairLaborScore\": 52600451,\n    \"certificationStatus\": \"ipsum ut reprehenderit ex\",\n    \"lastAuditDate\": \"1972-12-29T23:10:48.281Z\",\n    \"createdAt\": \"1967-01-26T02:52:22.926Z\",\n    \"updatedAt\": \"1950-02-14T03:39:13.841Z\"\n  },\n  \"emissionSource\": \"proident\",\n  \"mitigationMeasures\": \"veniam est ad in\",\n  \"createdAt\": \"2004-04-24T22:32:52.902Z\",\n  \"updatedAt\": \"1977-10-06T20:29:12.333Z\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/carbon-footprints/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"carbon-footprints",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"emissionDate\": \"1951-10-03T07:54:35.901Z\",\n  \"productionEmissions\": -53552939.07446654,\n  \"transportationEmissions\": -22848683.234667793,\n  \"id\": -76032917,\n  \"supplier\": {\n    \"email\": \"anim sint ut ea dolor\",\n    \"name\": \"aliqua laboris consequat \",\n    \"id\": 46167491,\n    \"sustainablePracticesScore\": 75365556,\n    \"fairLaborScore\": 52600451,\n    \"certificationStatus\": \"ipsum ut reprehenderit ex\",\n    \"lastAuditDate\": \"1972-12-29T23:10:48.281Z\",\n    \"createdAt\": \"1967-01-26T02:52:22.926Z\",\n    \"updatedAt\": \"1950-02-14T03:39:13.841Z\"\n  },\n  \"emissionSource\": \"proident\",\n  \"mitigationMeasures\": \"veniam est ad in\",\n  \"createdAt\": \"2004-04-24T22:32:52.902Z\",\n  \"updatedAt\": \"1977-10-06T20:29:12.333Z\"\n}"
+										}
+									]
+								},
+								{
+									"name": "delete Carbon Footprint",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/carbon-footprints/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"carbon-footprints",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-84195226",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/carbon-footprints/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"carbon-footprints",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "total-emissions",
+							"item": [
+								{
+									"name": "supplier",
+									"item": [
+										{
+											"name": "{supplierId}",
+											"item": [
+												{
+													"name": "get Total Emissions By Supplier",
+													"request": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/carbon-footprints/total-emissions/supplier/:supplierId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"carbon-footprints",
+																"total-emissions",
+																"supplier",
+																":supplierId"
+															],
+															"variable": [
+																{
+																	"key": "supplierId",
+																	"value": "-84195226",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "OK",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "*/*"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/carbon-footprints/total-emissions/supplier/:supplierId",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"carbon-footprints",
+																		"total-emissions",
+																		"supplier",
+																		":supplierId"
+																	],
+																	"variable": [
+																		{
+																			"key": "supplierId"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "text",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "*/*"
+																}
+															],
+															"cookie": [],
+															"body": "-20678397.1647397"
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "supplier",
+							"item": [
+								{
+									"name": "{supplierId}",
+									"item": [
+										{
+											"name": "get Carbon Footprints By Supplier",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/carbon-footprints/supplier/:supplierId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"carbon-footprints",
+														"supplier",
+														":supplierId"
+													],
+													"variable": [
+														{
+															"key": "supplierId",
+															"value": "-84195226",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/carbon-footprints/supplier/:supplierId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"carbon-footprints",
+																"supplier",
+																":supplierId"
+															],
+															"variable": [
+																{
+																	"key": "supplierId"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "[\n  {\n    \"emissionDate\": \"2022-08-17T08:57:21.507Z\",\n    \"productionEmissions\": 5616367.342154443,\n    \"transportationEmissions\": -49521135.91483269,\n    \"id\": 2079734,\n    \"supplier\": {\n      \"email\": \"amet sit nostrud id occaecat\",\n      \"name\": \"amet ut incididunt\",\n      \"id\": -38641793,\n      \"sustainablePracticesScore\": -89101767,\n      \"fairLaborScore\": 64431813,\n      \"certificationStatus\": \"adipisicing ea amet aliquip tempor\",\n      \"lastAuditDate\": \"1964-01-02T18:13:59.482Z\",\n      \"createdAt\": \"1961-11-29T01:05:25.365Z\",\n      \"updatedAt\": \"1996-11-23T16:05:33.504Z\"\n    },\n    \"emissionSource\": \"pariatur dolore dolor mollit\",\n    \"mitigationMeasures\": \"velit et dolore laboris\",\n    \"createdAt\": \"2020-10-07T16:45:19.289Z\",\n    \"updatedAt\": \"2013-10-26T05:39:53.893Z\"\n  },\n  {\n    \"emissionDate\": \"1976-11-30T15:26:59.890Z\",\n    \"productionEmissions\": 72393209.51481107,\n    \"transportationEmissions\": 31894928.21082966,\n    \"id\": -41355676,\n    \"supplier\": {\n      \"email\": \"pariatur ex aute Duis\",\n      \"name\": \"pariatur labore\",\n      \"id\": 88150334,\n      \"sustainablePracticesScore\": 86238919,\n      \"fairLaborScore\": -73558116,\n      \"certificationStatus\": \"dolor\",\n      \"lastAuditDate\": \"1959-03-18T07:33:16.858Z\",\n      \"createdAt\": \"2011-09-06T16:59:49.343Z\",\n      \"updatedAt\": \"2024-05-14T20:37:13.232Z\"\n    },\n    \"emissionSource\": \"ad\",\n    \"mitigationMeasures\": \"\",\n    \"createdAt\": \"1956-05-14T18:56:01.764Z\",\n    \"updatedAt\": \"1988-10-26T16:54:18.524Z\"\n  }\n]"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "create Carbon Footprint",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"emissionDate\": \"1951-10-03T07:54:35.901Z\",\n  \"productionEmissions\": -53552939.07446654,\n  \"transportationEmissions\": -22848683.234667793,\n  \"id\": -76032917,\n  \"supplier\": {\n    \"email\": \"anim sint ut ea dolor\",\n    \"name\": \"aliqua laboris consequat \",\n    \"id\": 46167491,\n    \"sustainablePracticesScore\": 75365556,\n    \"fairLaborScore\": 52600451,\n    \"certificationStatus\": \"ipsum ut reprehenderit ex\",\n    \"lastAuditDate\": \"1972-12-29T23:10:48.281Z\",\n    \"createdAt\": \"1967-01-26T02:52:22.926Z\",\n    \"updatedAt\": \"1950-02-14T03:39:13.841Z\"\n  },\n  \"emissionSource\": \"proident\",\n  \"mitigationMeasures\": \"veniam est ad in\",\n  \"createdAt\": \"2004-04-24T22:32:52.902Z\",\n  \"updatedAt\": \"1977-10-06T20:29:12.333Z\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/carbon-footprints",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"carbon-footprints"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"emissionDate\": \"1951-10-03T07:54:35.901Z\",\n  \"productionEmissions\": -53552939.07446654,\n  \"transportationEmissions\": -22848683.234667793,\n  \"id\": -76032917,\n  \"supplier\": {\n    \"email\": \"anim sint ut ea dolor\",\n    \"name\": \"aliqua laboris consequat \",\n    \"id\": 46167491,\n    \"sustainablePracticesScore\": 75365556,\n    \"fairLaborScore\": 52600451,\n    \"certificationStatus\": \"ipsum ut reprehenderit ex\",\n    \"lastAuditDate\": \"1972-12-29T23:10:48.281Z\",\n    \"createdAt\": \"1967-01-26T02:52:22.926Z\",\n    \"updatedAt\": \"1950-02-14T03:39:13.841Z\"\n  },\n  \"emissionSource\": \"proident\",\n  \"mitigationMeasures\": \"veniam est ad in\",\n  \"createdAt\": \"2004-04-24T22:32:52.902Z\",\n  \"updatedAt\": \"1977-10-06T20:29:12.333Z\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/carbon-footprints",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"carbon-footprints"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"emissionDate\": \"1951-10-03T07:54:35.901Z\",\n  \"productionEmissions\": -53552939.07446654,\n  \"transportationEmissions\": -22848683.234667793,\n  \"id\": -76032917,\n  \"supplier\": {\n    \"email\": \"anim sint ut ea dolor\",\n    \"name\": \"aliqua laboris consequat \",\n    \"id\": 46167491,\n    \"sustainablePracticesScore\": 75365556,\n    \"fairLaborScore\": 52600451,\n    \"certificationStatus\": \"ipsum ut reprehenderit ex\",\n    \"lastAuditDate\": \"1972-12-29T23:10:48.281Z\",\n    \"createdAt\": \"1967-01-26T02:52:22.926Z\",\n    \"updatedAt\": \"1950-02-14T03:39:13.841Z\"\n  },\n  \"emissionSource\": \"proident\",\n  \"mitigationMeasures\": \"veniam est ad in\",\n  \"createdAt\": \"2004-04-24T22:32:52.902Z\",\n  \"updatedAt\": \"1977-10-06T20:29:12.333Z\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080"
+		}
+	]
+}
