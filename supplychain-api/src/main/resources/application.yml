@@ -24,6 +24,20 @@ spring:
 server:
   port: 8080
 
+# OpenAPI/Swagger Configuration
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+    enabled: true
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: method
+    tags-sorter: alpha
+    enabled: true
+    config-url: /v3/api-docs/swagger-config
+    url: /v3/api-docs
+  packages-to-scan: br.com.fiap.supplychainapi.controller
+
 security:
   jwt:
     secret: S3cr3tK3yForJWTGeneration
